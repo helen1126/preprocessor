@@ -1,3 +1,0 @@
-F:/git/preprocessor/build/CMakeFiles/prompt_preprocessor.dir
-F:/git/preprocessor/build/CMakeFiles/edit_cache.dir
-F:/git/preprocessor/build/CMakeFiles/rebuild_cache.dir
