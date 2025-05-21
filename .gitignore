@@ -1,0 +1,24 @@
+# 构建相关
+/build/          # CMake 生成的构建目录
+*.exe            # 可执行文件（Windows）
+*.obj            # 目标文件
+*.o              # 对象文件（Unix-like，但Windows也可能生成）
+*.a              # 静态库
+*.lib            # Windows 库文件
+
+# 开发工具配置
+.vscode/         # VS Code 配置
+.idea/           # IntelliJ 系列 IDE 配置
+*.suo            # Visual Studio 解决方案用户选项
+*.ncb            # Visual Studio 符号数据库
+*.aps            # Visual Studio 资源文件
+
+# 操作系统临时文件
+Thumbs.db        # Windows 缩略图缓存
+.DS_Store        # macOS 目录元数据（跨平台兼容）
+ehthumbs.db      # Windows 资源管理器缩略图数据库
+Desktop.ini      # Windows 目录属性配置
+
+# 测试/调试相关
+*.log            # 日志文件
+*.stackdump      # 崩溃转储文件

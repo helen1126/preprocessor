@@ -1,0 +1,38 @@
+[
+{
+  "directory": "F:/git/preprocessor/build",
+  "command": "D:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/prompt_preprocessor.dir/includes_CXX.rsp -g -std=gnu++17 -fopenmp -fopenmp -o CMakeFiles\\prompt_preprocessor.dir\\src\\preprocessor.cpp.obj -c F:\\git\\preprocessor\\src\\preprocessor.cpp",
+  "file": "F:/git/preprocessor/src/preprocessor.cpp",
+  "output": "CMakeFiles/prompt_preprocessor.dir/src/preprocessor.cpp.obj"
+},
+{
+  "directory": "F:/git/preprocessor/build",
+  "command": "D:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/prompt_preprocessor.dir/includes_CXX.rsp -g -std=gnu++17 -fopenmp -fopenmp -o CMakeFiles\\prompt_preprocessor.dir\\src\\regex_engine.cpp.obj -c F:\\git\\preprocessor\\src\\regex_engine.cpp",
+  "file": "F:/git/preprocessor/src/regex_engine.cpp",
+  "output": "CMakeFiles/prompt_preprocessor.dir/src/regex_engine.cpp.obj"
+},
+{
+  "directory": "F:/git/preprocessor/build",
+  "command": "D:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/prompt_preprocessor.dir/includes_CXX.rsp -g -std=gnu++17 -fopenmp -fopenmp -o CMakeFiles\\prompt_preprocessor.dir\\src\\omp_processor.cpp.obj -c F:\\git\\preprocessor\\src\\omp_processor.cpp",
+  "file": "F:/git/preprocessor/src/omp_processor.cpp",
+  "output": "CMakeFiles/prompt_preprocessor.dir/src/omp_processor.cpp.obj"
+},
+{
+  "directory": "F:/git/preprocessor/build",
+  "command": "D:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/prompt_preprocessor.dir/includes_CXX.rsp -g -std=gnu++17 -fopenmp -fopenmp -o CMakeFiles\\prompt_preprocessor.dir\\src\\main.cpp.obj -c F:\\git\\preprocessor\\src\\main.cpp",
+  "file": "F:/git/preprocessor/src/main.cpp",
+  "output": "CMakeFiles/prompt_preprocessor.dir/src/main.cpp.obj"
+},
+{
+  "directory": "F:/git/preprocessor/build",
+  "command": "D:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/prompt_preprocessor.dir/includes_CXX.rsp -g -std=gnu++17 -fopenmp -fopenmp -o CMakeFiles\\prompt_preprocessor.dir\\lexer.cpp.obj -c F:\\git\\preprocessor\\build\\lexer.cpp",
+  "file": "F:/git/preprocessor/build/lexer.cpp",
+  "output": "CMakeFiles/prompt_preprocessor.dir/lexer.cpp.obj"
+},
+{
+  "directory": "F:/git/preprocessor/build",
+  "command": "D:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/prompt_preprocessor.dir/includes_CXX.rsp -g -std=gnu++17 -fopenmp -fopenmp -o CMakeFiles\\prompt_preprocessor.dir\\parser.cpp.obj -c F:\\git\\preprocessor\\build\\parser.cpp",
+  "file": "F:/git/preprocessor/build/parser.cpp",
+  "output": "CMakeFiles/prompt_preprocessor.dir/parser.cpp.obj"
+}
+]
