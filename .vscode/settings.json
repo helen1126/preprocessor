@@ -1,3 +1,6 @@
 {
-    "gitConfigUser.selectedProfile": "preprocessor"
+    "gitConfigUser.selectedProfile": "preprocessor",
+    "files.associations": {
+        "ostream": "cpp"
+    }
 }

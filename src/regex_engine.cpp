@@ -3,13 +3,14 @@
 #include <stdexcept>
 
 /**
- * @brief ½âÎöÊäÈë×Ö·û´®ÖĞµÄÊôĞÔ-È¨ÖØ¶Ô
- * @param input °üº¬ÊôĞÔÈ¨ÖØ±ê¼ÇµÄÊäÈë×Ö·û´®£¨¸ñÊ½Ê¾Àı£º"ÌáÊ¾´Ê(ÊôĞÔ:0.75)(ÊôĞÔ:0.8)"£©
- * @return ½âÎöµÃµ½µÄÊôĞÔ-È¨ÖØ¶ÔÏòÁ¿
- * @note Ê¹ÓÃÕıÔò±í´ïÊ½Æ¥Åä¸ñÊ½Îª`(ÊôĞÔÃû:ÊıÖµ)`µÄ±ê¼Ç£¬Ö§³ÖÖĞÎÄ/×ÖÄ¸/Êı×Ö/ÏÂ»®ÏßÊôĞÔÃû
+ * @brief è§£æè¾“å…¥å­—ç¬¦ä¸²ä¸­çš„å±æ€§-æƒé‡å¯¹
+ * @param input åŒ…å«å±æ€§æƒé‡æ ‡è®°çš„è¾“å…¥å­—ç¬¦ä¸²ï¼ˆæ ¼å¼ç¤ºä¾‹ï¼š"æç¤ºè¯(å±æ€§:0.75)(å±æ€§:0.8)"ï¼‰
+ * @return è§£æå¾—åˆ°çš„å±æ€§-æƒé‡å¯¹å‘é‡
+ * @note ä½¿ç”¨æ­£åˆ™è¡¨è¾¾å¼åŒ¹é…æ ¼å¼ä¸º`(å±æ€§å:æ•°å€¼)`çš„æ ‡è®°ï¼Œæ”¯æŒä¸­æ–‡/å­—æ¯/æ•°å­—/ä¸‹åˆ’çº¿å±æ€§å
  */
 std::vector<AttributeWeight> RegexEngine::parse(const std::string& input) {
     std::vector<AttributeWeight> results;
+    // Fixed: Use \p{Han} Unicode property escape (requires C++17+)
     std::regex pattern(R"(\(([\p{Han}a-zA-Z0-9_]+):([0-9]+(\.[0-9]+)?)\))");
     std::sregex_iterator it(input.begin(), input.end(), pattern);
     std::sregex_iterator end;

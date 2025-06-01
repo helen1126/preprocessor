@@ -6,7 +6,7 @@
 "("                 { return LPAREN; }
 ")"                 { return RPAREN; }
 ":"                 { return COLON; }
-([a-zA-Z_]+)        { yylval.str = strdup(yytext); return ATTRIBUTE; }
+([\u4E00-\u9FA5a-zA-Z_]+)  { yylval.str = strdup(yytext); return ATTRIBUTE; }  // 新增中文字符支持
 ([0-9]+(\.[0-9]+)?) { yylval.num = atof(yytext); return WEIGHT; }
 [ \t\n]             { /* 忽略空白 */ }
 .                   { return yytext[0]; }  // 其他字符

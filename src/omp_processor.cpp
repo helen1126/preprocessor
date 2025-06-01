@@ -19,8 +19,16 @@ void process_in_parallel(const std::vector<std::string>& prompts) {
         
         #pragma omp critical
         {
+            // 提取提示词关键词（去除括号及之后的属性）
+            std::string prompt_keyword = prompts[i];
+            size_t bracket_pos = prompt_keyword.find('(');
+            if (bracket_pos != std::string::npos) {
+                prompt_keyword = prompt_keyword.substr(0, bracket_pos);
+            }
+
             std::ostringstream json_stream;
-            json_stream << "{ \"prompt\": \"" << prompts[i] << "\", \"attributes\": [";
+            // 使用提取的关键词代替原始prompt
+            json_stream << "{ \"prompt\": \"" << prompt_keyword << "\", \"attributes\": [";
             
             for (size_t j = 0; j < attributes.size(); ++j) {
                 if (j > 0) json_stream << ", ";
