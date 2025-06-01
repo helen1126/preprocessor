@@ -1,65 +1,65 @@
-# PromptPreprocessor ÌáÊ¾´ÊÔ¤´¦Àí¹¤¾ß
+# PromptPreprocessor æç¤ºè¯é¢„å¤„ç†å·¥å…·
 
-## ¼ò½é
-±¾¹¤¾ßÓÃÓÚ½âÎö×ÔÈ»ÓïÑÔÌáÊ¾´ÊÖÐµÄÊôÐÔ-È¨ÖØ±ê¼Ç£¨¸ñÊ½Èç`(ÊôÐÔ:È¨ÖØ)`£©£¬Ö§³Ö×ÖÄ¸/Êý×Ö/ÏÂ»®ÏßÊôÐÔÃû£¬²¢Í¨¹ýOpenMPÊµÏÖ¶àÏß³Ì²¢ÐÐ´¦Àí¡£
+## ç®€ä»‹
+æœ¬å·¥å…·ç”¨äºŽè§£æžè‡ªç„¶è¯­è¨€æç¤ºè¯ä¸­çš„å±žæ€§-æƒé‡æ ‡è®°ï¼ˆæ ¼å¼å¦‚`(å±žæ€§:æƒé‡)`ï¼‰ï¼Œæ”¯æŒå­—æ¯/æ•°å­—/ä¸‹åˆ’çº¿å±žæ€§åï¼Œå¹¶é€šè¿‡OpenMPå®žçŽ°å¤šçº¿ç¨‹å¹¶è¡Œå¤„ç†ã€‚
 
-## °²×°Óë¹¹½¨
+## å®‰è£…ä¸Žæž„å»º
 
-### ÒÀÀµÏî
-- C++17 ±àÒëÆ÷£¨ÍÆ¼öGCC 11+»òMSVC 2019+£©
-- CMake 3.16+£¨¹¹½¨¹¤¾ß£©
-- Flex 2.6+£¨´Ê·¨·ÖÎöÆ÷Éú³ÉÆ÷£©
-- Bison 3.8+£¨Óï·¨·ÖÎöÆ÷Éú³ÉÆ÷£©
-- OpenMP£¨²¢ÐÐ¼ÆËãÖ§³Ö£¬¶àÊý±àÒëÆ÷ÒÑÄÚÖÃ£©
+### ä¾èµ–é¡¹
+- C++17 ç¼–è¯‘å™¨ï¼ˆæŽ¨èGCC 11+æˆ–MSVC 2019+ï¼‰
+- CMake 3.16+ï¼ˆæž„å»ºå·¥å…·ï¼‰
+- Flex 2.6+ï¼ˆè¯æ³•åˆ†æžå™¨ç”Ÿæˆå™¨ï¼‰
+- Bison 3.8+ï¼ˆè¯­æ³•åˆ†æžå™¨ç”Ÿæˆå™¨ï¼‰
+- OpenMPï¼ˆå¹¶è¡Œè®¡ç®—æ”¯æŒï¼Œå¤šæ•°ç¼–è¯‘å™¨å·²å†…ç½®ï¼‰
 
-### ¹¹½¨²½Öè£¨Windows£©
+### æž„å»ºæ­¥éª¤ï¼ˆWindowsï¼‰
 ```bash
-# ¿ËÂ¡ÏîÄ¿µ½±¾µØ
-git clone https://github.com/your-username/preprocessor.git
+# å…‹éš†é¡¹ç›®åˆ°æœ¬åœ°
+git clone https://github.com/helen1126/preprocessor.git
 cd preprocessor
 
-# ´´½¨²¢½øÈë¹¹½¨Ä¿Â¼
+# åˆ›å»ºå¹¶è¿›å…¥æž„å»ºç›®å½•
 mkdir build
 cd build
 
-# Éú³ÉÏîÄ¿ÎÄ¼þ£¨Ê¹ÓÃMinGW Makefiles£©
+# ç”Ÿæˆé¡¹ç›®æ–‡ä»¶ï¼ˆä½¿ç”¨MinGW Makefilesï¼‰
 cmake .. -G "MinGW Makefiles"
 
-# ±àÒë
+# ç¼–è¯‘
 mingw32-make
 ```
 
 ---
 
-## Ê¹ÓÃÊ¾Àý
+## ä½¿ç”¨ç¤ºä¾‹
 
-### ÊäÈë¸ñÊ½
-ÊäÈëÌáÊ¾´ÊÐè°üº¬`(ÊôÐÔ:È¨ÖØ)`¸ñÊ½µÄ±ê¼Ç£¨°ë½ÇÀ¨ºÅºÍÃ°ºÅ£©£¬Ê¾Àý£º
+### è¾“å…¥æ ¼å¼
+è¾“å…¥æç¤ºè¯éœ€åŒ…å«`(å±žæ€§:æƒé‡)`æ ¼å¼çš„æ ‡è®°ï¼ˆåŠè§’æ‹¬å·å’Œå†’å·ï¼‰ï¼Œç¤ºä¾‹ï¼š
 ```text
 "another_prompt(feel:0.5)(style:0.7)"
 ```
 
-### Êä³öÊ¾Àý
+### è¾“å‡ºç¤ºä¾‹
 ```json
 { "prompt": "another_prompt(feel:0.5)(style:0.7)", "attributes": [ { "feel": 0.5 }, { "style": 0.7 } ] }
 ```
 
 ---
 
-## Ä¿Â¼½á¹¹
+## ç›®å½•ç»“æž„
 ```
 preprocessor/
-©À©¤©¤ build/              # ¹¹½¨Êä³öÄ¿Â¼£¨ºöÂÔ£©
-©À©¤©¤ include/            # Í·ÎÄ¼þ
-©¦   ©À©¤©¤ preprocessor.h  # Ô¤´¦ÀíºËÐÄÀàÉùÃ÷
-©¦   ©¸©¤©¤ regex_engine.h  # ÕýÔò½âÎöÆ÷ÉùÃ÷
-©À©¤©¤ src/                # Ô´ÎÄ¼þ
-©¦   ©À©¤©¤ main.cpp        # ³ÌÐòÈë¿Ú
-©¦   ©À©¤©¤ omp_processor.cpp # ²¢ÐÐ´¦ÀíÊµÏÖ
-©¦   ©À©¤©¤ preprocessor.cpp # Ô¤´¦ÀíºËÐÄÂß¼­
-©¦   ©¸©¤©¤ regex_engine.cpp # ÕýÔò½âÎöÆ÷ÊµÏÖ
-©À©¤©¤ .gitignore          # GitºöÂÔ¹æÔò
-©¸©¤©¤ CMakeLists.txt      # ¹¹½¨ÅäÖÃ
+â”œâ”€â”€ build/              # æž„å»ºè¾“å‡ºç›®å½•ï¼ˆå¿½ç•¥ï¼‰
+â”œâ”€â”€ include/            # å¤´æ–‡ä»¶
+â”‚   â”œâ”€â”€ preprocessor.h  # é¢„å¤„ç†æ ¸å¿ƒç±»å£°æ˜Ž
+â”‚   â””â”€â”€ regex_engine.h  # æ­£åˆ™è§£æžå™¨å£°æ˜Ž
+â”œâ”€â”€ src/                # æºæ–‡ä»¶
+â”‚   â”œâ”€â”€ main.cpp        # ç¨‹åºå…¥å£
+â”‚   â”œâ”€â”€ omp_processor.cpp # å¹¶è¡Œå¤„ç†å®žçŽ°
+â”‚   â”œâ”€â”€ preprocessor.cpp # é¢„å¤„ç†æ ¸å¿ƒé€»è¾‘
+â”‚   â””â”€â”€ regex_engine.cpp # æ­£åˆ™è§£æžå™¨å®žçŽ°
+â”œâ”€â”€ .gitignore          # Gitå¿½ç•¥è§„åˆ™
+â””â”€â”€ CMakeLists.txt      # æž„å»ºé…ç½®
 ```
 
         
